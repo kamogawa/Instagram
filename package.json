@@ -1,14 +1,20 @@
 {
-  "name": "Instagram",
+  "name": "instagram",
   "version": "1.0.0",
   "repository": "https://github.com/kamogawa/Instagram.git",
   "author": "BEUMGOO <captain_kbg@naver.com>",
   "license": "MIT",
   "dependencies": {
-    "graphql-yoga": "^1.18.3"
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "dotenv": "^8.1.0",
+    "graphql-tools": "^4.0.5",
+    "graphql-yoga": "^1.18.3",
+    "merge-graphql-schemas": "^1.7.0",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "nodemon": "^1.19.2"
   },
   "scripts": {
