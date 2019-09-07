@@ -1,0 +1,6 @@
+endpoint: https://us1.prisma.sh/beumgoo-kim-fe1d02/Instagram/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/
