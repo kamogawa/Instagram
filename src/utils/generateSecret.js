@@ -5,4 +5,5 @@ const generateSecret = () => {
 
   return `${adjectives[randomNumber]} ${nouns[randomNumber]}`;
 };
+
 export default generateSecret;
