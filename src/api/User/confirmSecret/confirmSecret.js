@@ -1,15 +1,16 @@
 import { prisma } from "../../../../generated/prisma-client";
+import generateToken from "../../../utils/generateToken";
 
 export default {
   Mutation: {
-    confirmSecret: async(_, args) => {
+    confirmSecret: async (_, args) => {
+
       const { email, secret } = args;
-      const user = await prisma.user({email});
+      const user = await prisma.user({ email });
       if (user.loginSecret === secret) {
-        //JWT
-        return "Token"
+        return generateToken(user.id);
       } else {
-        throw Error("Wrong email/secret conbiation");
+        throw Error("Wrong email/secret combination");
       }
     }
   }
