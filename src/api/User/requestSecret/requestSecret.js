@@ -4,14 +4,10 @@ import sendSecretMail from "../../../utils/sendSecretMail";
 
 export default {
   Mutation: {
-    requestSecret: async (_, args, {request}) => {
+    requestSecret: async (_, args) => {
       const { email } = args;
-
       const loginSecret = await generateSecret();
-      console.log(loginSecret);
-
       try {
-        throw Error();
         await sendSecretMail(email,loginSecret);
         await prisma.updateUser({
           data: {loginSecret}, 
