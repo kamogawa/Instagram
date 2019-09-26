@@ -5,7 +5,7 @@ dotenv.config({ path: path.resolve(__dirname, "../.env") });
 import nodemailer from "nodemailer";
 import sgTransport from "nodemailer-sendgrid-transport";
 
-const sendMail = (email) => {
+const sendMail = email => {
   const options = {
     auth: {
       api_user: process.env.SENDGRID_USERNAME,
@@ -24,7 +24,9 @@ const sendSecretMail = (adress, secret) => {
     subject: "🔒Login Secret for Prismagram🔒",
     html: `Hello! Your login secret it 「<b>${secret}</b>」.<br/>Copy paste on the app/website to log in`
   };
-  return sendMail(email).catch( e => {console.log(e)});
+  return sendMail(email).catch(e => {
+    console.log(e);
+  });
 };
 
 export default sendSecretMail;
