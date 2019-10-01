@@ -13,7 +13,6 @@ export default {
           data: {loginSecret}, 
           where: {email}
         });
-  
         return true;
       } catch {
         return false;
