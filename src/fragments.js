@@ -7,4 +7,3 @@ export const COMMENT_FRAGMENT = `
     }
   }
 `;
-git 

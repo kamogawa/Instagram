@@ -1,3 +1,3 @@
 type Mutation {
-  toggleLike(text: String!, postId: String!): Comment!
+  toggleLike(postId: String!): Boolean!
 }
