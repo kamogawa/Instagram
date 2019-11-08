@@ -1,5 +1,6 @@
 import { prisma } from "../../../../generated/prisma-client";
 
+//user情報を修正
 export default {
   Mutation: {
     editUser: (_, args, { request, isAuthenticated }) => {

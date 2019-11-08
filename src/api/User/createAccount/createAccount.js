@@ -1,8 +1,9 @@
-import { prisma } from "../../../../generated/prisma-client"
+import { prisma } from "../../../../generated/prisma-client";
 
+//accountを生成
 export default {
   Mutation: {
-    createAccount: async(_, args) => {
+    createAccount: async (_, args) => {
       const { username, email, firstName = "", lastName = "", bio = "" } = args;
 
       const user = await prisma.createUser({
@@ -16,4 +17,4 @@ export default {
       return user;
     }
   }
-}
+};

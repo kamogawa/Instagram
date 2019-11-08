@@ -1,6 +1,7 @@
 import { prisma } from "../../../../generated/prisma-client";
 import generateToken from "../../../utils/generateToken";
 
+//
 export default {
   Mutation: {
     confirmSecret: async (_, args) => {
